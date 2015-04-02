@@ -80,3 +80,10 @@ end
 
 game_json = RestClient.get("#{host}/games/#{game['id']}",).body
 puts game_json
+puts "\n\n"
+
+completed_game = JSON.parse(game_json);
+puts "COMPLETED GAME WITH SCORE:"
+puts "Time:  #{completed_game['time_score']}"
+puts "Cost:  #{completed_game['cost_score']}"
+puts "Total:  #{completed_game['total_score']}"

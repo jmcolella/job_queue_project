@@ -75,9 +75,13 @@ var assignJobs = function(game, machine, turn, skipNewMachine) {
       request.get(
         host + '/games/' + game.id,
         function (error, response, body) {
-          console.log("COMPLETED GAME WITH DATA:");
           console.log(body);
-          assignJobs(game, machine, JSON.parse(body));
+          console.log("\n\n");
+          var completedGame = JSON.parse(body);
+          console.log("COMPLETED GAME WITH SCORE:");
+          console.log("Time:  " + completedGame.time_score); 
+          console.log("Cost:  " + completedGame.cost_score); 
+          console.log("Total: " + completedGame.total_score); 
         }
       );
     }
