@@ -11,7 +11,7 @@ host = 'http://job-queue-dev.elasticbeanstalk.com'
 #
 game_json = RestClient.post(
   "#{host}/games",
-  user_token: 'reference'
+  {}
 ).body
 game = JSON.parse(game_json)
 

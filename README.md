@@ -37,8 +37,76 @@ sum of the two.
 
 ## API Endpoints ##
 
+The game is operated for a REST-ful API with the following endpoints:
+
+1. Create a new game, which is the first thing you'll need to do in each run of your program.
+This requires no parameters and returns some basic data about the game, including its id.
+
     ```
-    brew install git
+    POST http://job-queue-dev.elasticbeanstalk.com/games
+
+    {
+      "id":80, "cost":0, "current_turn":0, "completed":false,
+      "created_at":"2015-04-02T12:46:24.024Z", "updated_at":"2015-04-02T12:46:24.024Z",
+      "jobs_completed":0, "total_score":null, "cost_score":null, "time_score":null
+    }
+    ```
+
+2. Get data about a game. This returns data in the same form as the create game call above.
+
+    ```
+    GET http://job-queue-dev.elasticbeanstalk.com/games/{game_id}
+    ```
+
+3. Advance to the next turn in the game. This will move you to the next turn, cycle out
+jobs that have completed, and add in cost for the machines you have running. It returns
+data about the jobs in the current turn as well as the state of the game.
+
+    ```
+    GET http://job-queue-dev.elasticbeanstalk.com/games/{game_id}/next_turn
+
+    {
+      "jobs":[
+        {"id":32912,"turn":1,"turns_required":6,"gigs_required":3}
+      ],
+      "status":"active", "machines_running":0, "jobs_running":0,
+      "jobs_queued":0,"jobs_completed":0,"current_turn":1
+    }
+    ```
+
+4. Create a new machine.
+
+    ```
+    POST http://job-queue-dev.elasticbeanstalk.com/games/{game_id}/machines
+
+    {
+      "id":457,"game_id":80,"terminated":null
+    }
+    ```
+
+5. Schedule a machine for termination.
+
+    ```
+    DELETE http://job-queue-dev.elasticbeanstalk.com/games/{game_id}/machines/{machine_id}
+
+    {
+      "id":457,
+      "game_id":80,
+      "terminated":true
+    }
+    ```
+
+6. Assign jobs to a machine. This requires that you pass a job_ids parameter in the body that contains a JSON-encoded array of job ids to assign. It returns the number of jobs that were placed in the queue and added to the running list.
+
+    ```
+    POST http://job-queue-dev.elasticbeanstalk.com/games/{game_id}/machines/{machine_id}/job_assignments
+
+    Request body: { job_ids: "[32912,32913]" }
+
+    {
+      "queued":0,
+      "running":1
+    }
     ```
 
 ## Reference Implementations ##

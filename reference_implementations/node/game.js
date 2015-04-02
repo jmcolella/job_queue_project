@@ -110,12 +110,12 @@ var playGameWithMachine = function(game) {
 };
 
 //
-// Kick off the game by posting to the new game endpoint with my user token
+// Kick off the game by posting to the new game endpoint
 //
 var playGame = function() {
   request.post(
     host + '/games',
-    { form: { user_token: 'reference' } },
+    { form: {} },
     function (error, response, body) {
       playGameWithMachine(JSON.parse(body));
     }
