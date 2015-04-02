@@ -14,11 +14,11 @@ cost as possible.
 ## The Basics ##
 
 We've set up an API that you can access to get all of the data you need for your game. It is
-a turn-based game where each turn includes a batch of jobs that need to be processed. For
-each turn, you will get the batch of jobs, create or remove machines as necessary, and assign
+a turn-based game where each turn includes a batch of jobs that needs to be processed. For
+each turn you will be given the batch of jobs, and then you will create or remove machines as necessary and assign
 jobs to the machines for processing. Here are some basic ground rules:
 
-1. There are 500 turns. Each turn contains between 1 and 40 jobs, for a total of 7537 jobs.
+1. There are two versions of the game, one with 500 turns and one with 50. Each turn contains between 1 and 40 jobs.
 
 2. Each job requires a fixed amount of memory and a fixed number of turns to complete.
 
@@ -28,16 +28,24 @@ jobs to the machines for processing. Here are some basic ground rules:
 
 5. You can delete a machine whenever you want, but you will pay for it until all of its jobs, including the ones in its queue, have finished processing.
 
+In general, a turn will look like this:
+
+1. Pull the data for the turn, including its batch of jobs.
+
+2. Create or remove machines as necessary to handle the new jobs.
+
+3. Assign jobs to the machines for processing.
+
 ## Scoring ##
 
 Each machine costs $1 per turn to operate. The goal is to process the jobs as quickly as
 possible while incurring the minimum possible cost. At the end of the game, you will receive
 a score from 0 - 100 for each of those two factors as well as a total score, which is the
-sum of the two.
+sum of the two. It is not possible to acheive a perfect score, unless you are cheating.
 
 ## API Endpoints ##
 
-The game is operated for a REST-ful API with the following endpoints:
+The game is operated by a RESTful API with the following endpoints:
 
 1. Create a new game, which is the first thing you'll need to do in each run of your program.
 This requires no parameters and returns some basic data about the game, including its id.
@@ -64,7 +72,7 @@ try that out to make sure things scale before submitting.
     ```
 
 3. Advance to the next turn in the game. This will move you to the next turn, cycle out
-jobs that have completed, and add in cost for the machines you have running. It returns
+jobs that have completed, and calculate the cost of the machines you have running. It returns
 data about the jobs in the current turn as well as the state of the game.
 
     ```
@@ -118,7 +126,7 @@ data about the jobs in the current turn as well as the state of the game.
 
 This project includes reference implementations written in Ruby and Javascript (with Node),
 our two most-used languages at Custora. You can find them under the reference_implementations
-folder of this project. These implementations are given only for example purposes, and there
+folder. These implementations are given only for example purposes, and there
 is no requirement that you start by using one. They are intentionally simple, but using them
 will give you a head start in terms of connecting to the variouls API endpoints.
 
