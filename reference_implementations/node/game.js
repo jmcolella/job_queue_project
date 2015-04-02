@@ -35,7 +35,7 @@ var assignJobs = function(game, machine, turn, skipNewMachine) {
 
     console.log("On turn " +
       turn.current_turn +
-      " having completed " +
+      " got " + turn.jobs.length + " jobs, having completed " +
       turn.jobs_completed +
       " of " +
       totalJobsFound +
@@ -120,6 +120,7 @@ var playGame = function() {
   request.post(
     host + '/games',
     { form: {} },
+    // { form: { long: true } },
     function (error, response, body) {
       playGameWithMachine(JSON.parse(body));
     }

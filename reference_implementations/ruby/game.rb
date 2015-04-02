@@ -12,6 +12,7 @@ host = 'http://job-queue-dev.elasticbeanstalk.com'
 game_json = RestClient.post(
   "#{host}/games",
   {}
+  # { long: true }
 ).body
 game = JSON.parse(game_json)
 
@@ -41,7 +42,7 @@ jobs_found = turn['jobs'].count
 # When the status changes to completed the game is over
 #
 while (status != 'completed')
-  puts "On turn #{turn['current_turn']} having completed #{turn['jobs_completed']} of #{jobs_found} with #{turn['jobs_running']} jobs running, #{turn['jobs_queued']} jobs queued, and #{turn['machines_running']} machines running"
+  puts "On turn #{turn['current_turn']}, got #{turn['jobs'].count} jobs, having completed #{turn['jobs_completed']} of #{jobs_found} with #{turn['jobs_running']} jobs running, #{turn['jobs_queued']} jobs queued, and #{turn['machines_running']} machines running"
 
   #
   # This is purely for showing off how deleting machines works

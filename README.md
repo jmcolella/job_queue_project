@@ -41,9 +41,14 @@ The game is operated for a REST-ful API with the following endpoints:
 
 1. Create a new game, which is the first thing you'll need to do in each run of your program.
 This requires no parameters and returns some basic data about the game, including its id.
+There are two games to play, the short one (50 turns) and the long one (500 turns). The short
+one is the default, but we'll also test your code against the long one, so you may want to
+try that out to make sure things scale before submitting.
 
     ```
     POST http://job-queue-dev.elasticbeanstalk.com/games
+
+    Optional request body: { long: true }
 
     {
       "id":80, "cost":0, "current_turn":0, "completed":false,
