@@ -67,7 +67,7 @@ data about the jobs in the current turn as well as the state of the game.
 
     {
       "jobs":[
-        {"id":32912,"turn":1,"turns_required":6,"gigs_required":3}
+        {"id":32912,"turn":1,"turns_required":6,"memory_required":3}
       ],
       "status":"active", "machines_running":0, "jobs_running":0,
       "jobs_queued":0,"jobs_completed":0,"current_turn":1
