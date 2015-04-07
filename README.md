@@ -127,21 +127,22 @@ data about the jobs in the current turn as well as the state of the game.
 This project includes reference implementations written in Ruby and Javascript (with Node),
 our two most-used languages at Custora. You can find them under the reference_implementations
 folder. These implementations are given only for example purposes, and there
-is no requirement that you start by using one. They are intentionally simple, but using them
-will give you a head start in terms of connecting to the variouls API endpoints.
+is no requirement that you start by using one, or even that your use one of these languages.
+They are intentionally simple, but using them will give you a head start in terms of
+connecting to the various API endpoints.
 
 ## Expectations ##
 
 There is no need for you to work on this project until you get a perfect score. We're looking
 for your code to be well organized and for you to have put some effort into finding a good
 solution to the problem, but you shouldn't spend more than a couple of hours on this project.
-This is intended to be a fun opportunity for you to showcase your skills rather than a
-contest to see who can get the highest score.
+You may implement it in any language you like. This is intended to be a fun opportunity for
+you to showcase your skills rather than a contest to see who can get the highest score.
 
 ## Submitting Your Project ##
 
-When you've completed your project, zip up the code and email it to aubrey@custora.com. We
-will take a look at it within a couple of days and get back to you.
+When you've completed your project, zip up the code and a brief explanation of your solution
+and email it to aubrey@custora.com. We will take a look at it within a couple of days and get back to you.
 
 ## Trouble? Problems? Questions? ##
 
