@@ -24,7 +24,7 @@ jobs to the machines for processing. Here are some basic ground rules:
 
 3. You can create machines whenever you want, and they are immediately available for jobs.
 
-4. Each machine has 64GB of memory. If you assign greater than 64GB of jobs to a machine, the jobs will go on a queue for that machine and will be processed as memory is freed up in the order that they were received.
+4. Each machine has 64GB of memory. If you assign greater than 64GB of jobs to a machine, the jobs will go on a queue for that machine and will be processed as memory is freed up in the order that they were assigned to the machine.
 
 5. You can delete a machine whenever you want, but you will pay for it until all of its jobs, including the ones in its queue, have finished processing.
 
