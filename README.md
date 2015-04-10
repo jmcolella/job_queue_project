@@ -38,10 +38,15 @@ In general, a turn will look like this:
 
 ## Scoring ##
 
-Each machine costs $1 per turn to operate. The goal is to process the jobs as quickly as
-possible while incurring the minimum possible cost. At the end of the game, you will receive
-a score from 0 - 100 for each of those two factors as well as a total score, which is the
-sum of the two. It is not possible to acheive a perfect score, unless you are cheating.
+Each machine costs $1 per turn to operate. The goal is to process the jobs with as little delay as
+possible while incurring the minimum possible cost. By querying the game object, you will get two
+numbers that measure these values:
+
+1. cost is the current total for the number of dollars spent.
+
+2. delay_turns is the total number of turns between when jobs were given and when they started to execute.
+
+The goal is to minimize these values. An approach that spins up a new machine for each job would have a delay_turns score of zero, but a very high cost. Alternatively, assigning all jobs to the same machine would give you a high value for both factors. The lowest possible value for delay_turns is zero, and we're not sure what the lowest possible cost is yet. We're less concerned with you getting perfect values for these things than with the organization of your code and your approach to the problem.
 
 ## API Endpoints ##
 
@@ -61,7 +66,7 @@ try that out to make sure things scale before submitting.
     {
       "id":80, "cost":0, "current_turn":0, "completed":false,
       "created_at":"2015-04-02T12:46:24.024Z", "updated_at":"2015-04-02T12:46:24.024Z",
-      "jobs_completed":0, "total_score":null, "cost_score":null, "time_score":null
+      "jobs_completed":0, "short":false, "delay_turns":0
     }
     ```
 
@@ -83,7 +88,7 @@ data about the jobs in the current turn as well as the state of the game.
         {"id":32912,"turn":1,"turns_required":6,"memory_required":3}
       ],
       "status":"active", "machines_running":0, "jobs_running":0,
-      "jobs_queued":0,"jobs_completed":0,"current_turn":1
+      "jobs_queued":0,"jobs_completed":0,"current_turn":1, "delay_turns":0
     }
     ```
 
@@ -109,7 +114,7 @@ data about the jobs in the current turn as well as the state of the game.
     }
     ```
 
-6. Assign jobs to a machine. This requires that you pass a job_ids parameter in the body that contains a JSON-encoded array of job ids to assign. It returns the number of jobs that were placed in the queue and added to the running list.
+6. Assign jobs to a machine. This requires that you pass a job_ids parameter in the body that contains a JSON-encoded array of job ids to assign. It returns the number of jobs that were placed in the queue and added to the running list. The jobs will be executed strictly in the order that they are passed.
 
     ```
     POST http://job-queue-dev.elasticbeanstalk.com/games/{game_id}/machines/{machine_id}/job_assignments
@@ -135,9 +140,9 @@ connecting to the various API endpoints.
 
 There is no need for you to work on this project until you get a perfect score. We're looking
 for your code to be well organized and for you to have put some effort into finding a good
-solution to the problem, but you shouldn't spend more than a couple of hours on this project.
+solution to the problem, but you shouldn't spend more than a few hours on this project.
 You may implement it in any language you like. This is intended to be a fun opportunity for
-you to showcase your skills rather than a contest to see who can get the highest score.
+you to showcase your skills rather than a contest to see who can get the lowest score.
 
 ## Submitting Your Project ##
 

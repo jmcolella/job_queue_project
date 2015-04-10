@@ -78,10 +78,9 @@ var assignJobs = function(game, machine, turn, skipNewMachine) {
           console.log(body);
           console.log("\n\n");
           var completedGame = JSON.parse(body);
-          console.log("COMPLETED GAME WITH SCORE:");
-          console.log("Time:  " + completedGame.time_score); 
-          console.log("Cost:  " + completedGame.cost_score); 
-          console.log("Total: " + completedGame.total_score); 
+          console.log("COMPLETED GAME WITH:");
+          console.log("Total delay: " + completedGame.delay_turns + " turns"); 
+          console.log("Total cost:  $" + completedGame.cost); 
         }
       );
     }
