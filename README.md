@@ -146,8 +146,9 @@ you to showcase your skills rather than a contest to see who can get the lowest 
 
 ## Submitting Your Project ##
 
-When you've completed your project, zip up the code and a brief explanation of your solution
-and email it to aubrey@custora.com. We will take a look at it within a couple of days and get back to you.
+The email you received to introduce the project included a link for submitting it at the bottom.
+When you've completed your project, zip up the code and a brief explanation of your solution and use that link for submission.
+We will take a look at it within a couple of days and get back to you.
 
 ## Trouble? Problems? Questions? ##
 
