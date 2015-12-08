@@ -151,8 +151,7 @@ Some questions to consider:
 
 Please discuss, but don't implement the following:
 1. What is the run time complexity of your algorithm (expressed as m machines and n jobs)?
-2. How would your solution change as the cost of a machine relative to the cost of a delayed turn changes?
-3. What other heuristics can you think of to approximate the ideal solution? How would they compare with your implementation?
+2. What other heuristics can you think of to approximate the ideal solution? How would they compare with your implementation?
 
 ## Submitting Your Project ##
 
