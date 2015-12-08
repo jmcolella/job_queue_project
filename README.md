@@ -139,12 +139,13 @@ connecting to the various API endpoints.
 ## Expectations ##
 
 You may implement your solution in any language you like. This is intended to be a fun opportunity for you to showcase 
-your skills rather than a contest to see who can get the lowest score.
+your skills rather than a contest to see who can get the lowest score. A suggested approach is to keep delay turns at 0 
+and optimize for machine cost, then add delay turns to your solution.
 
 Some questions to consider:
 1. This is an NP hard problem, what heuristic have you chosen to approximate the optimal solution, why?
 2. What data structures did you use? Why?
-3. How did you organize your code?
+3. How did you organize your code? Can you easily specify the relative cost of running a machine and a delay turn?
 
 Please discuss, but don't implement the following:
 1. What is the run time complexity of your algorithm (expressed as m machines and n jobs)?
