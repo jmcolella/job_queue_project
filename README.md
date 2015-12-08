@@ -138,11 +138,18 @@ connecting to the various API endpoints.
 
 ## Expectations ##
 
-There is no need for you to work on this project until you get a perfect score. We're looking
-for your code to be well organized and for you to have put some effort into finding a good
-solution to the problem, but you shouldn't spend more than a few hours on this project.
-You may implement it in any language you like. This is intended to be a fun opportunity for
-you to showcase your skills rather than a contest to see who can get the lowest score.
+You may implement your solution in any language you like. This is intended to be a fun opportunity for you to showcase 
+your skills rather than a contest to see who can get the lowest score.
+
+Some questions to consider:
+1. This is an NP hard problem, what heuristic have you chosen to approximate the optimal solution, why?
+2. What data structures did you use? Why?
+3. How did you organize your code?
+
+Please discuss, but don't implement the following:
+1. What is the run time complexity of your algorithm (expressed as m machines and n jobs)?
+2. How would your solution change as the cost of a machine relative to the cost of a delayed turn changes?
+3. What other heuristics can you think of to approximate the ideal solution? How would they compare with your implementation?
 
 ## Submitting Your Project ##
 
