@@ -143,9 +143,11 @@ your skills rather than a contest to see who can get the lowest score. A suggest
 and optimize for machine cost, then add delay turns to your solution.
 
 Some questions to consider:
-1. This is an NP hard problem, what heuristic have you chosen to approximate the optimal solution, why?
+1. This is an NP hard problem, what heuristic have you chosen to approximate the optimal solution(s), why?
 2. What data structures did you use? Why?
-3. How did you organize your code? Can you easily specify the relative cost of running a machine and a delay turn?
+3. How did you organize your code? 
+4. Can you easily specify the relative cost of running a machine and a delay turn (potentially a parameter or a class that implements a strategy)?
+5. Does the code have good style? (naming, imports, comments, convention of the language, etc)
 
 Please discuss, but don't implement the following:
 1. What is the run time complexity of your algorithm (expressed as m machines and n jobs)?
