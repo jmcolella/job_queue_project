@@ -148,11 +148,11 @@ Some questions to consider:
 
 2. What data structures did you use? Why?
 
-4. How is the code organized? Does the code have good style? (naming, imports, comments, convention of the language, etc)
+3. How is the code organized? Does the code have good style? (naming, imports, comments, convention of the language, etc)
  
 Nice to have, but not mandatory:  
  
-5. Can you specify the relative cost of running a machine and a delay turn (potentially a parameter or a class that implements a strategy)?
+4. Can you specify the relative cost of running a machine and a delay turn (potentially a parameter or a class that implements a strategy)?
 
 Please discuss, but don't implement the following:
 
