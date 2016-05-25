@@ -150,7 +150,7 @@ Please answer:
 
 3. How is the code organized? Does the code have good style? (naming, imports, comments, convention of the language, etc)
 
-4. What is the run time complexity of your algorithm?
+4. Discuss the run time complexity of your algorithm.
 
 5. Please don't implement: What other heuristics can you think of to approximate the optimal solution(s)? How would they compare with your implementation?
 
