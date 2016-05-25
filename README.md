@@ -142,23 +142,21 @@ You may implement your solution in any language you like. This is intended to be
 your skills rather than a contest to see who can get the lowest score. A suggested approach is to keep delay turns at 0 
 and optimize for machine cost, then add delay turns to your solution.
 
-Some questions to consider:
+Please answer:
 
 1. This is an NP hard problem, what heuristic have you chosen to approximate the optimal solution(s), why?
 
 2. What data structures did you use? Why?
 
 3. How is the code organized? Does the code have good style? (naming, imports, comments, convention of the language, etc)
- 
+
+4. What is the run time complexity of your algorithm?
+
+5. Please don't implement: What other heuristics can you think of to approximate the optimal solution(s)? How would they compare with your implementation?
+
 Nice to have, but not mandatory:  
  
-4. Can you specify the relative cost of running a machine and a delay turn (potentially a parameter or a class that implements a strategy)?
-
-Please discuss, but don't implement the following:
-
-1. What is the run time complexity of your algorithm?
-
-2. What other heuristics can you think of to approximate the optimal solution(s)? How would they compare with your implementation?
+Can you specify the relative cost of running a machine and a delay turn (potentially a parameter or a class that implements a strategy)?
 
 ## Submitting Your Project ##
 
