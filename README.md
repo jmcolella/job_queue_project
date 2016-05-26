@@ -166,5 +166,5 @@ We will take a look at it within a couple of days and get back to you.
 
 ## Trouble? Problems? Questions? ##
 
-If you run into problems along the way, feel free to email aubrey@custora.com, and we will
+If you run into problems along the way, feel free to email tech@custora.com, and we will
 help you out.
